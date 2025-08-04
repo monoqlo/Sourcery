@@ -1,4 +1,4 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.9
 
 import PackageDescription
 import Foundation
@@ -264,7 +264,7 @@ var dependencies: [Package.Dependency] = [
 ]
 
 #if compiler(>=6.2)
-dependencies.append(.package(url: "https://github.com/swiftlang/swift-package-manager.git", revision: "5c57a39"))
+dependencies.append(.package(url: "https://github.com/swiftlang/swift-package-manager.git", revision: "cacb4fb"))
 #else
 dependencies.append(.package(url: "https://github.com/art-divin/swift-package-manager.git", exact: "1.0.8"))
 #endif
@@ -276,7 +276,7 @@ dependencies.append(.package(url: "https://github.com/apple/swift-crypto.git", f
 let package = Package(
     name: "Sourcery",
     platforms: [
-        .macOS(.v13),
+        .macOS(.v14),
     ],
     products: [
         // SPM won't generate .swiftmodule for a target directly used by a product,
